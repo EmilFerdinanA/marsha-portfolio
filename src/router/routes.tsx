@@ -11,6 +11,10 @@ export const router = createBrowserRouter([
         index: true,
         element: <Contact />,
       },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
     ],
   },
 ]);

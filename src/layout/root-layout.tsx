@@ -1,13 +1,14 @@
-import React from "react";
 import { Outlet } from "react-router";
 import Navbar from "@/components/navbar";
 
 const RootLayout = () => {
   return (
-    <React.Fragment>
+    <div className="h-screen flex flex-col overflow-hidden">
       <Navbar />
-      <Outlet />
-    </React.Fragment>
+      <main className="flex-1 overflow-y-auto mx-auto w-full max-w-7xl">
+        <Outlet />
+      </main>
+    </div>
   );
 };
 

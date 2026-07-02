@@ -5,7 +5,7 @@ const CONTACT_DATA = [
     id: "phone",
     label: "Phone",
     value: "+62 857 6555 7588",
-    link: "tel:+6285765557588",
+    link: "https://wa.me/+6285765557588",
     icon: (
       <svg
         className="w-5 h-5 text-white"
@@ -60,7 +60,7 @@ const CONTACT_DATA = [
     id: "linkedin",
     label: "LinkedIn",
     value: "www.linkedin.com/in/annisa-marshaa-tsabita",
-    link: "https://www.linkedin.com/in/annisa-marshaa-tsabita",
+    link: "https://www.linkedin.com/in/annisa-marsha-tsabita/",
     icon: (
       <svg
         className="w-5 h-5 text-white"
@@ -73,26 +73,13 @@ const CONTACT_DATA = [
   },
 ];
 
-function ProfileIllustration() {
-  return (
-    <div className="relative w-full h-screen aspect-square">
-      {/* Background Layer 2: Sharp Violet Geometric Accent Block */}
-      <div className="absolute bottom-0 right-0 w-[66%] h-[50%] bg-[#6D28D9] z-10 transition-transform duration-500 hover:scale-105" />
-
-      <img src={Me} alt="Me" className="z-50 w-[80%] relative" />
-    </div>
-  );
-}
-
 const Contact = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center h-screen">
-      {/* Left Column: Contact details in high-contrast list */}
-      <div className="lg:col-span-6 flex flex-col justify-center space-y-10 order-2 lg:order-1">
+    <div className="grid grid-cols-1 lg:grid-cols-12">
+      <div className="flex justify-center items-center lg:col-span-6 order-1 lg:order-2">
         <ul className="space-y-6">
           {CONTACT_DATA.map((item) => (
-            <li key={item.id} className="group flex items-center space-x-6">
-              {/* Circle Crimson/Pink Badge */}
+            <li key={item.id} className="flex items-center space-x-6">
               <a
                 href={item.link}
                 target="_blank"
@@ -103,8 +90,7 @@ const Contact = () => {
                 {item.icon}
               </a>
 
-              {/* Value & Label */}
-              <div className="flex flex-col min-w-0">
+              <div className="flex flex-col min-w-0 text-justify">
                 <span className="text-xs text-gray-400 uppercase tracking-widest font-semibold">
                   {item.label}
                 </span>
@@ -124,9 +110,11 @@ const Contact = () => {
         </ul>
       </div>
 
-      {/* Right Column: Layered Graphic Collage */}
-      <div className="lg:col-span-6 flex justify-center items-center order-1 lg:order-2">
-        <ProfileIllustration />
+      <div className="lg:col-span-6 order-1 lg:order-2">
+        <div>
+          <div className="absolute bottom-0 right-0 w-[33%] h-[51%] bg-[#6D28D9] z-10" />
+          <img src={Me} alt="Me" className="relative z-20" />
+        </div>
       </div>
     </div>
   );
