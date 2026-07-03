@@ -2,7 +2,7 @@ import Me from "@/assets/Home.webp";
 
 const Hero = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 items-center h-full">
+    <div className="grid grid-cols-1 lg:grid-cols-12 items-center h-full px-6 py-16 md:py-24 lg:py-32">
       {/* Left Content */}
       <div data-aos="fade-right" className="md:col-span-7 space-y-6 text-left">
         <span className="inline-block text-[#5B47E0] text-sm md:text-base font-semibold tracking-wide uppercase">

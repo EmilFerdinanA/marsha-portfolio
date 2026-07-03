@@ -191,15 +191,18 @@ const TechnicalSkills = () => {
 
 const About = () => {
   return (
-    <section className="h-full">
+    <section className="h-full mx-auto max-w-7xl">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center h-full px-6 py-16 md:py-24 lg:py-32">
         {/* Left */}
-        <div className="lg:col-span-5">
+        <div data-aos="fade-right" className="lg:col-span-5">
           <img src={Me} alt="Me" />
         </div>
 
         {/* Right */}
-        <div className="lg:col-span-7 flex flex-col justify-center text-left">
+        <div
+          data-aos="fade-left"
+          className="lg:col-span-7 flex flex-col justify-center text-left"
+        >
           <span className="text-[#64748B] text-xs font-bold uppercase tracking-widest mb-3 block">
             About
           </span>

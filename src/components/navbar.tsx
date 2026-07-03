@@ -41,7 +41,7 @@ const Navbar = () => {
                 to={item.url}
                 key={item.url}
                 className={`relative py-2 text-[15px] font-medium transition-all duration-300 ease-out outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-4 rounded ${
-                  location.pathname === item.url && item.label === "Home"
+                  location.pathname === item.url
                     ? "text-[#6D28D9] scale-105"
                     : "text-gray-500 hover:text-[#6D28D9] active:scale-95"
                 }`}
