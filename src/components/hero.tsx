@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 items-center h-full">
       {/* Left Content */}
-      <div className="md:col-span-7 space-y-6 text-left">
+      <div data-aos="fade-right" className="md:col-span-7 space-y-6 text-left">
         <span className="inline-block text-[#5B47E0] text-sm md:text-base font-semibold tracking-wide uppercase">
           Hey, I am Marsha
         </span>
@@ -25,7 +25,10 @@ const Hero = () => {
       </div>
 
       {/* Right Content */}
-      <div className="md:col-span-5 relative flex justify-center items-center">
+      <div
+        data-aos="fade-left"
+        className="md:col-span-5 relative flex justify-center items-center"
+      >
         <img src={Me} alt="Me" />
       </div>
     </div>
